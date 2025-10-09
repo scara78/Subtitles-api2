@@ -265,7 +265,7 @@ async function generateRealisticSubtitles(imdbId, movieData, language, limit) {
   const languageMap = {
     'en': 'English', 'es': 'Spanish', 'fr': 'French', 'de': 'German',
     'it': 'Italian', 'pt': 'Portuguese', 'ru': 'Russian', 'ja': 'Japanese',
-    'ko': 'Korean', 'zh': 'Chinese', 'ar': 'Arabic'
+    'ko': 'Korean', 'zh': 'Chinese', 'ro': 'Romanian'
   };
   
   const languages = language === 'all' ? Object.keys(languageMap) : [language];
