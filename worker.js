@@ -153,7 +153,7 @@ async function getSubtitlesByImdbId(imdbId, searchParams, movieData = null) {
           subtitles = openSubsData.slice(0, limit).map(sub => ({
             id: sub.IDSubtitleFile || sub.id || Math.random().toString(36),
             name: sub.SubFileName || sub.filename || 'subtitle.srt',
-            language: sub.LanguageName || sub.language || 'English',
+            language: sub.LanguageName || sub.language || 'Romanian',
             download_url: sub.SubDownloadLink || sub.download_link,
             view_url: sub.SubtitlesLink || sub.view_url,
             rating: sub.SubRating || '0.0',
