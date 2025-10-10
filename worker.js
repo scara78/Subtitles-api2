@@ -266,7 +266,7 @@ async function generateRealisticSubtitles(imdbId, movieData, language, limit) {
     'en': 'English', 'rum': 'Romanian'
   };
   
-  const languages = language === 'all' ? Object.keys(languageMap) : [language];
+  const languages = language === 'rum' ? Object.keys(languageMap) : [language];
   
   for (let i = 0; i < Math.min(limit, 15); i++) {
     const selectedLang = languages[i % languages.length];
