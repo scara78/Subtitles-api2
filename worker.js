@@ -162,6 +162,7 @@ async function getSubtitlesByImdbId(imdbId, searchParams, movieData = null) {
             format: sub.SubFormat || 'srt',
             files: 1,
             fps: sub.MovieFPS || '23.976'
+            download_srt: downloadUrl,
           }));
         }
       }
