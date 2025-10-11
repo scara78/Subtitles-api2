@@ -155,7 +155,6 @@ async function getSubtitlesByImdbId(imdbId, searchParams, movieData = null) {
             name: sub.SubFileName || sub.filename || 'subtitle.srt',
             language: sub.LanguageName || sub.language || 'English',
             download_url: sub.SubDownloadLink || sub.download_link,
-            download_srt: downloadUrl || downloadUrl,
             view_url: sub.SubtitlesLink || sub.view_url,
             rating: sub.SubRating || '0.0',
             downloads: parseInt(sub.SubDownloadsCnt || '0'),
