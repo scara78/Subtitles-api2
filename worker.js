@@ -153,7 +153,7 @@ async function getSubtitlesByImdbId(imdbId, searchParams, movieData = null) {
           subtitles = openSubsData.slice(0, limit).map(sub => ({
             id: sub.IDSubtitleFile || sub.id || Math.random().toString(36),
             name: sub.SubFileName || sub.filename || 'subtitle.srt',
-            language: sub.LanguageName || sub.language || 'Romanian',
+            language: sub.LanguageName || sub.language || 'English',
             download_url: sub.SubDownloadLink || sub.download_link,
             view_url: sub.SubtitlesLink || sub.view_url,
             rating: sub.SubRating || '0.0',
@@ -263,10 +263,12 @@ async function generateRealisticSubtitles(imdbId, movieData, language, limit) {
   const releases = ['YTS', 'RARBG', 'FGT', 'EVO'];
   
   const languageMap = {
-    'en': 'English', 'rum': 'Romanian'
+    'en': 'English', 'es': 'Spanish', 'fr': 'French', 'de': 'German',
+    'it': 'Italian', 'pt': 'Portuguese', 'ru': 'Russian', 'ja': 'Japanese',
+    'ko': 'Korean', 'zh': 'Chinese', 'ar': 'Arabic'
   };
   
-  const languages = language === 'rum' ? Object.keys(languageMap) : [language];
+  const languages = language === 'all' ? Object.keys(languageMap) : [language];
   
   for (let i = 0; i < Math.min(limit, 15); i++) {
     const selectedLang = languages[i % languages.length];
@@ -543,6 +545,5 @@ function getApiDocumentation() {
     }
   });
 }
-
 
 
