@@ -161,8 +161,8 @@ async function getSubtitlesByImdbId(imdbId, searchParams, movieData = null) {
             uploader: sub.UserNickName || 'Anonymous',
             format: sub.SubFormat || 'srt',
             files: 1,
-            fps: sub.MovieFPS || '23.976'
-            download_srt: downloadUrl,
+            fps: sub.MovieFPS || '23.976',
+            realDownloadUrl = `https://dl.opensubtitles.org/en/download/file/${sub.id}.srt`
           }));
         }
       }
