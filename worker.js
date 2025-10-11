@@ -271,7 +271,7 @@ async function generateRealisticSubtitles(imdbId, movieData, language, limit) {
   
   for (let i = 0; i < Math.min(limit, 15); i++) {
     const selectedLang = languages[i % languages.length];
-    const langName = languageMap[selectedLang] || 'Roumanian';
+    const langName = languageMap[selectedLang] || 'English';
     const format = formats[Math.floor(Math.random() * formats.length)];
     const quality = qualities[Math.floor(Math.random() * qualities.length)];
     const release = releases[Math.floor(Math.random() * releases.length)];
